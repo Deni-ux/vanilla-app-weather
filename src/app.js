@@ -22,6 +22,9 @@ function displayForecast(){
 
 }
 
+function getForecast(coordinates){
+    console.log(coordinates);
+}
 
 function displayTemperature(response){
     document.querySelector("#city").innerHTML=response.data.name;
@@ -38,6 +41,7 @@ function displayTemperature(response){
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
  
+  getForecast(response.data.coord);
   
  } 
 
