@@ -18,7 +18,22 @@ currentDate.innerHTML=formatDate(new Date);
 
 function displayForecast(){
     let forecastElement=document.querySelector("#forecast");
-    forecastElement.innerHTML="Forecast";
+    forecastElement.innerHTML=`
+     <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">Mon</div>
+
+                <img
+                  src="https://assets.msn.com/bundles/v1/weather/latest/CloudyV3.svg"
+                  alt=""
+                  width="42px"
+                />
+                <div class="weather-forecast-temp">
+                  <span class="temp-max">18°</span
+                  ><span class="temp-min"> 12°</span>
+                </div>
+              </div>
+            </div>`;
 
 }
 
@@ -27,6 +42,7 @@ function getForecast(coordinates){
     let apiKey = "b2694a5d8f39bb351277f910bc5d27c4";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response){
