@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form">
+            <div class="form-row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  class="form-control me-2"
+                  placeholder="Search for a city.."
+                  autocomplete="off"
+                  id="search-input"
+                />
+              </div>
+              <div class="col-2 d-flex justify-content-center">
+                <button type="submit" class="btn btn-light">🔎</button>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <button
+                  type="submit"
+                  class="btn btn-light"
+                  id="current-location"
+                >
+                  🏠
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-6">
+              <img src="#" alt="weather icon" id="weather-icon" width="200px" />
+            </div>
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li class="sky" id="weatherDescription">CLOUDY</li>
+                <li class="conditions">
+                  ☔ <span id="humidity"></span>%, 💨
+                  <span id="windspeed"></span>km/h
+                </li>
+              </ul>
+
+              <div class="weather-temp">
+                <strong id="temperature">13</strong
+                ><span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a>|<a
+                    href="#"
+                    id="fahrenheit-link"
+                    class="active"
+                    >°F</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="text-left">
+            <h1 id="city">London</h1>
+            <span id="date" class="dt"> Saturday, 20:00</span>
+          </div>
+          <div class="weather-forecast" id="forecast">
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">Mon</div>
+
+                <img
+                  src="https://assets.msn.com/bundles/v1/weather/latest/CloudyV3.svg"
+                  alt=""
+                  width="42px"
+                />
+                <div class="weather-forecast-temp">
+                  <span class="temp-max">18°</span
+                  ><span class="temp-min"> 12°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <small>
+          <a href="#" class="opensource">Open-source</a> by Denisa Haka
+        </small>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
