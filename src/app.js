@@ -18,10 +18,16 @@ currentDate.innerHTML=formatDate(new Date);
 
 function displayForecast(){
     let forecastElement=document.querySelector("#forecast");
-    forecastElement.innerHTML=`
+    
+    let forecastHTML=`<div class="row>`;
+    let days = ["Sat", "Sun", "Mon"]; //loop through an array
+    //use forEach
+    days.forEach(function(day){
+        forecastHTML = forecastHTML + 
+    `
      <div class="row">
               <div class="col-2">
-                <div class="weather-forecast-date">Mon</div>
+                <div class="weather-forecast-date">${day}</div>
 
                 <img
                   src="https://assets.msn.com/bundles/v1/weather/latest/CloudyV3.svg"
@@ -34,6 +40,11 @@ function displayForecast(){
                 </div>
               </div>
             </div>`;
+ 
+    })
+   
+    forecastHTML = forecastHTML+ `</div>`;
+    forecastElement.innerHTML= forecastHTML;
 
 }
 
