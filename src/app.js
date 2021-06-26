@@ -29,7 +29,7 @@ function displayForecast(response){
     let forecast=response.data.daily;
     let forecastElement=document.querySelector("#forecast");
     
-    let days = ["Sat", "Sun", "Mon"]; //loop through an array
+     //loop through an array
     //use forEach (day)
     let forecastHTML =`<div class="row">`;
     
@@ -61,7 +61,7 @@ function displayForecast(response){
     forecastElement.innerHTML= forecastHTML;
 
 }
-
+//one call api
 function getForecast(coordinates){
    
     let apiKey = "b2694a5d8f39bb351277f910bc5d27c4";
