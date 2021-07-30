@@ -18,17 +18,17 @@ ul {
   margin-top: 50px;
   margin-left: 60px;
   text-align: right;
-  color: #ffcbcb;
+  color: #f95959;
 }
 .sky {
   font-size: 18px;
 }
 
 h1 {
-  color: #137083;
+  color: #233142;
 }
 .dt {
-  color: #ffcbcb;
+  color: #455d7a;
 }
 img {
   display: block;
@@ -59,7 +59,7 @@ img {
 
 .weather-forecast {
   text-align: center;
-  color: #137083;
+  color: #222831;
 }
 .weather-forecast-date {
   font-size: 16px;
